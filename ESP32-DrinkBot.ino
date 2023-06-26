@@ -275,34 +275,5 @@ void handleRoot(HTTPRequest* req, HTTPResponse* res) {
   res->println("<!DOCTYPE html>");
   res->println("<html>");
   res->println("<head><title>Hello World!</title></head>");
-  res->println("<style>.info{font-style:italic}</style>");
-  res->println("<body>");
-
-  res->println("<h1>Query Parameters</h1>");
-  res->println("<p class=\"info\">The parameters after the question mark in your URL.</p>");
-
-  // Show a form to select a color to colorize the faces
-  // We pass the selection as get parameter "shades" to this very same page,
-  // so we can evaluate it below
-  res->println("<form method=\"GET\" action=\"/\">Show me faces in shades of ");
-  res->println("<select name=\"shades\">");
-  res->println("<option value=\"red\">red</option>");
-  res->println("<option value=\"green\">green</option>");
-  res->println("<option value=\"blue\">blue</option>");
-  res->println("<option value=\"yellow\">yellow</option>");
-  res->println("<option value=\"cyan\">cyan</option>");
-  res->println("<option value=\"magenta\">magenta</option>");
-  res->println("<option value=\"rainbow\">rainbow</option>");
-  res->println("</select>");
-  res->println("<button type=\"submit\">Go!</button>");
-  res->println("</form>");
-  res->println("<p>You'll find another demo <a href=\"/queryparams?a=42&b&c=13&a=hello\">here</a>.</p>");
-
-  // Link to the path parameter demo
-  res->println("<h1>Path Parameters</h1>");
-  res->println("<p class=\"info\">The parameters derived from placeholders in your path, like /foo/bar.</p>");
-  res->println("<p>You'll find the demo <a href=\"/urlparam/foo/bar\">here</a>.</p>");
-
-  res->println("</body>");
   res->println("</html>");
 }
