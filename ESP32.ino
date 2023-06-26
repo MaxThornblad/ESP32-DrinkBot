@@ -53,7 +53,6 @@ void setup() {
   networkPassword = preferences.getString("password", "");
   delay(1000);
   if (networkSSID != "" && networkPassword != "") {
-    // WiFi.begin(networkSSID.c_str(), networkPassword.c_str());
     Serial.println("Credentials found.");
     connectToWiFi = true;  // Set flag for checking in loop()
   } else {
